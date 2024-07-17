@@ -25,25 +25,30 @@
                             <table class="table table-hover table-bordered">
                                 <thead>
                                     <tr>
-                                        <th width="10"><input type="checkbox"></th>
+                                       
                                         <th>Mã Loại Phòng</th>
                                         <th>Tên Loại Phòng</th>
+                                        <th class="w-75">Mô tả</th>
                                         <th>Tình trạng</th>
                                         <th>Chức năng</th>
                                     </tr>
                                 </thead>
+                                @foreach ($KindRooms as $KindRoom)
+                                  
                                 <tbody>
                                     <tr>
-                                        <td width="10"><input type="checkbox" name="check1" value="1"></td>
-                                        <td>71309005</td>
-                                        <td>Bàn ăn gỗ Theresa</td>
+
+                                        
+                                        <td> {{$KindRoom->id}} </td>
+                                        <td>{{$KindRoom->name}}</td>
+                                        <td>{{$KindRoom->description}}</td>
                                         <td><span class="badge bg-success">Đã thêm mới</span></td>
                                         <td>
                                             <button class="btn btn-danger btn-sm trash" type="button" title="Xóa">
                                                 <i class="fas fa-trash-alt">Xóa</i>
                                             </button>
 
-                                            <a href="{{ route('updateKindRooms') }}"> <button
+                                            <a href="#"> <button
                                                     class="btn btn-primary btn-sm edit" type="button" title="Sửa"><i
                                                         class="fas fa-edit">Sửa</button></a></i>
                                         </td>
@@ -51,6 +56,11 @@
 
                                     <!-- xuat  -->
                                 </tbody>
+
+                                @endforeach
+                               
+                              
+                               
                             </table>
                         </div>
                     </div>
