@@ -34,6 +34,10 @@ Route::get('/login' , function(){
     return view('layouts.login');
 })->name('login');
 
+Route::get('/admin' , function(){
+    return view('layouts.admin.index');
+})->name('admin');
+
 
 
 
