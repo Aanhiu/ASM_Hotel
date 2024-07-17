@@ -54,7 +54,7 @@
                                 class='app-menu__icon bx bx-purchase-tag-alt'></i><span class="app-menu__label">Quản lý
                                 Loại Phòng</span></a></li>
 
-                    <li><a class="app-menu__item" href="#"><i class='app-menu__icon bx bx-task'></i><span
+                    <li><a class="app-menu__item" href="{{route('listRooms')}}"><i class='app-menu__icon bx bx-task'></i><span
                                 class="app-menu__label">Quản lý Phòng</span></a></li>
 
                     <li><a class="app-menu__item" href="#"><i class='app-menu__icon bx bx-task'></i><span

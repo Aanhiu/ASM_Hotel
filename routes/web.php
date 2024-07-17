@@ -4,6 +4,9 @@ use App\Http\Controllers\CreateKindRoomsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KindRoomsController;
 use App\Http\Controllers\ListKindRoomsController;
+use App\Http\Controllers\RoomController;
+use App\Http\Controllers\RoomsController;
+use Database\Seeders\RoomsSeeder;
 
 /*
 |--------------------------------------------------------------------------
@@ -62,7 +65,12 @@ Route::get('/editKindRooms/{id}' , [KindRoomsController::class , 'editKindRooms'
 // an nut cap nhat update loai phong
 Route::put('editKindRooms/{id}' , [KindRoomsController::class , 'updateKindRooms'])->name('updateKindRooms');
 
-
+// lay all rooms ra list
+Route::get('/listRooms' , [RoomsController::class , 'getListRooms'])->name('listRooms');
+// dieu huong den list phong
+// Route::get('/listRooms' , function(){
+//     return view('Rooms.list');
+// })->name('listRooms');
 
 
 
