@@ -44,7 +44,6 @@ Route::get('/admin' , function(){
 
 // xuất list loại phòng
 Route::get('/listKindRooms' , [KindRoomsController::class , 'getListKindRooms'])->name('listKindRooms');
-
 // Route::get('/listKindRooms' , function(){
 //     return view('KindRooms.list');
 // })->name('listKindRooms');

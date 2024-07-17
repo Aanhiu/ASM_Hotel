@@ -25,7 +25,7 @@
                             <table class="table table-hover table-bordered">
                                 <thead>
                                     <tr>
-                                       
+
                                         <th>Mã Loại Phòng</th>
                                         <th>Tên Loại Phòng</th>
                                         <th class="w-75">Mô tả</th>
@@ -34,33 +34,41 @@
                                     </tr>
                                 </thead>
                                 @foreach ($KindRooms as $KindRoom)
-                                  
-                                <tbody>
-                                    <tr>
+                                    <tbody>
+                                        <tr>
 
-                                        
-                                        <td> {{$KindRoom->id}} </td>
-                                        <td>{{$KindRoom->name}}</td>
-                                        <td>{{$KindRoom->description}}</td>
-                                        <td><span class="badge bg-success">Đã thêm mới</span></td>
-                                        <td>
-                                            <button class="btn btn-danger btn-sm trash" type="button" title="Xóa">
-                                                <i class="fas fa-trash-alt">Xóa</i>
-                                            </button>
 
-                                            <a href="#"> <button
-                                                    class="btn btn-primary btn-sm edit" type="button" title="Sửa"><i
-                                                        class="fas fa-edit">Sửa</button></a></i>
-                                        </td>
-                                    </tr>
+                                            <td>{{ $KindRoom->id }} </td>
+                                            <td>{{ $KindRoom->name }}</td>
+                                            <td>{{ $KindRoom->description }}</td>
+                                            <td><span class="badge bg-success">Đã thêm mới</span></td>
+                                            <td>
+                                                {{-- nut xoa loai phong theo id --}}
+                                                <form action="{{ route('deleteKindRooms', $KindRoom->id) }}" method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button class="btn btn-danger btn-sm trash" type="submit"
+                                                        title="Xóa" onclick="confirm('Bạn muốn xóa chứ')">
+                                                        <i class="fas fa-trash-alt">Xóa</i>
+                                                    </button>
 
-                                    <!-- xuat  -->
-                                </tbody>
+                                                </form>
 
+
+
+                                                {{-- nut sua loai phong theo id --}}
+                                                <a href="#"> <button class="btn btn-primary btn-sm edit"
+                                                        type="button" title="Sửa"><i
+                                                            class="fas fa-edit">Sửa</button></a></i>
+                                            </td>
+                                        </tr>
+
+                                        <!-- xuat  -->
+                                    </tbody>
                                 @endforeach
-                               
-                              
-                               
+
+
+
                             </table>
                         </div>
                     </div>

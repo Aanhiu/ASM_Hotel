@@ -32,6 +32,7 @@ class KindRoomsController extends Controller
             'name'=> $name,
             'description'=>$description
         ]);
+        
         return redirect('listKindRooms');
 
     }
@@ -39,8 +40,8 @@ class KindRoomsController extends Controller
     // ham delete 
     public function deleteKindRooms($id){
         // xoa loai phong theo id
-        DB::table('KindRooms')->where('id' , $id)->delete();
-        return redirect('listKinRooms');
+        DB::table('KindRooms')->delete($id);
+        return redirect('listKindRooms');
     }
 
 

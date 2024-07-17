@@ -19,12 +19,12 @@
                 </div>
                 <div class="mb-3">
                   <label class="form-label">Tên Loại Phòng</label>
-                  <input type="text" class="form-control" placeholder="Nhập tên loại phòng"  name="name">
+                  <input type="text" class="form-control" placeholder="Nhập tên loại phòng"  name="name" required>
                 </div>
 
                 <div class="mb-3">
                   <label class="form-label">Mô tả</label>
-                 <textarea cols="30" rows="5" class="form-control" name="description"></textarea>
+                 <textarea cols="30" rows="5" class="form-control" name="description" required ></textarea>
                 </div>
 
 
