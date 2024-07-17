@@ -16,7 +16,7 @@
                     <div class="tile-body">
                         <div class="row element-button">
                             <div class="col-sm-2">
-                                <a class="btn btn-add btn-sm" href="" title="Thêm">
+                                <a class="btn btn-add btn-sm" href="{{route('create')}}" title="Thêm">
                                     <i class="fas fa-plus"></i> Thêm mới Phòng
                                 </a>
                             </div>
@@ -42,10 +42,10 @@
                                         <tr>
                                             <td> {{ $Room->id }} </td>
                                             <td> {{ $Room->name }} </td>
-                                            <td><img src="" alt="Iamge Room"></td>
+                                            <td><img src="{{$Room->image}}" alt="Iamge Room"></td>
                                             <td> {{ $Room->price }}</td>
                                             <td> {{ $Room->description }}</td>
-                                            <td> {{ $Room->KindRoom_id }} </td>
+                                            <td> {{ $Room->kindroom_name }} </td>
                                             <td><span class="badge bg-success">
                                                     @if ($Room->status == 0)
                                                         <h6>Có thể thuê</h6>

@@ -72,6 +72,16 @@ Route::get('/listRooms' , [RoomsController::class , 'getListRooms'])->name('list
 //     return view('Rooms.list');
 // })->name('listRooms');
 
+// dieu huong den form them moi Room
+Route::get('/createRoom' , [RoomsController::class , 'create'])->name('create');
+// them moi phong
+// Route::get('createRoom' ,function(){
+//     return view('Rooms.create');
+// })->name('createRoom');
+
+
+
+
 
 
 
