@@ -33,11 +33,11 @@ class RoomsController extends Controller
     }
 
     // ham them moi loai phong 
-    public function createRooms()
-    {
-        // code them moi loai phong 
-        $KindRoom_id = DB::table('KindRooms')->select('name')->get();
-    }
+    // public function createRooms()
+    // {
+    //     // code them moi loai phong 
+    //     $KindRoom_id = DB::table('KindRooms')->select('name')->get();
+    // }
 
     // ham add them moi phong
 }
