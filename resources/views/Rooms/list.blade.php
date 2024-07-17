@@ -21,7 +21,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="table-responsive" style="max-height: 800px; overflow-y: auto;">
+                        <div class="table-responsive" style="max-height: 700px; overflow-y: auto;">
                             <table class="table table-hover table-bordered">
                                 <thead>
                                     <tr>
@@ -30,7 +30,7 @@
                                         <th>Tên Phòng</th>
                                         <th>Ảnh</th>
                                         <th>Giá Phòng</th>
-                                        <th>Mô Tả</th>
+                                        <th class="w-50">Mô Tả</th>
                                         <th>Loại Phòng</th>
                                         <th>Trạng Thái</th>
                                         <th>Chức Năng</th>

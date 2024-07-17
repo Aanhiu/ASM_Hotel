@@ -41,9 +41,9 @@
                 <div class="mb-3">
                   <label class="form-label">Loại Phòng</label>
                 <select name="" id="" class="form-control">
+
                     <option value="">Xuất loại phòng</option>
-                    <option value="">Xuất loại phòng</option>
-                    <option value="">Xuất loại phòng</option>
+                    
                 </select>
                 </div>
 

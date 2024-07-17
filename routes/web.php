@@ -67,17 +67,13 @@ Route::put('editKindRooms/{id}' , [KindRoomsController::class , 'updateKindRooms
 
 // lay all rooms ra list
 Route::get('/listRooms' , [RoomsController::class , 'getListRooms'])->name('listRooms');
-// dieu huong den list phong
-// Route::get('/listRooms' , function(){
-//     return view('Rooms.list');
-// })->name('listRooms');
 
 // dieu huong den form them moi Room
 Route::get('/createRoom' , [RoomsController::class , 'create'])->name('create');
-// them moi phong
-// Route::get('createRoom' ,function(){
-//     return view('Rooms.create');
-// })->name('createRoom');
+
+// dieu huong them moi Rooms
+
+
 
 
 
