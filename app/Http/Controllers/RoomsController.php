@@ -28,17 +28,15 @@ class RoomsController extends Controller
     // dieu huong de trang them moi
     public function create()
     {
+        $KindRoom_id = DB::table('KindRooms')->select('name')->get();
         return view('Rooms.create');
     }
+
     // ham them moi loai phong 
     public function createRooms()
     {
         // code them moi loai phong 
         $KindRoom_id = DB::table('KindRooms')->select('name')->get();
-
-        // xuat ten loai phong ra de them moi phong
-        // join lay ten cac loai phong ra
-        return view('Rooms.create', compact('KindRoom_id'));
     }
 
     // ham add them moi phong
