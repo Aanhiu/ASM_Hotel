@@ -57,7 +57,7 @@
 
 
                                                 {{-- nut sua loai phong theo id --}}
-                                                <a href="#"> <button class="btn btn-primary btn-sm edit"
+                                                <a href="{{route('editKindRooms' , $KindRoom->id)}}"> <button class="btn btn-primary btn-sm edit"
                                                         type="button" title="Sửa"><i
                                                             class="fas fa-edit">Sửa</button></a></i>
                                             </td>

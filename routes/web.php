@@ -44,15 +44,11 @@ Route::get('/admin' , function(){
 
 // xuất list loại phòng
 Route::get('/listKindRooms' , [KindRoomsController::class , 'getListKindRooms'])->name('listKindRooms');
-// Route::get('/listKindRooms' , function(){
-//     return view('KindRooms.list');
-// })->name('listKindRooms');
+
 
 // chuyen huong den form thêm mới loại phòng 
 Route::get('/createKindRooms' , [KindRoomsController::class , 'CreateKindRooms'])->name('createKindRooms');
-// Route::get('/createKindRooms' , function(){
-//     return view('KindRooms.create');
-// })->name('createKindRooms');
+
 
 // insert du lieu loai phong vao from
 Route::post('/storeKindRooms' , [KindRoomsController::class , 'storeKindRooms'])->name('storeKindRooms');
@@ -60,11 +56,13 @@ Route::post('/storeKindRooms' , [KindRoomsController::class , 'storeKindRooms'])
 // xoa theo id loai phong
 Route::delete('/deleteKindRooms/{id}' , [KindRoomsController::class , 'deleteKindRooms'])->name('deleteKindRooms');
 
+// edit va do du lieu update do theo id
+Route::get('/editKindRooms/{id}' , [KindRoomsController::class , 'editKindRooms'])->name('editKindRooms');
+
+// an nut cap nhat update loai phong
+Route::put('editKindRooms/{id}' , [KindRoomsController::class , 'updateKindRooms'])->name('updateKindRooms');
 
 
-Route::get('/updateKindRooms' , function(){
-    return view('KindRooms.update');
-})->name('updateKindRooms');
 
 
 
