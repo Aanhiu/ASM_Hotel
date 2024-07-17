@@ -38,6 +38,20 @@ Route::get('/admin' , function(){
     return view('layouts.admin.index');
 })->name('admin');
 
+Route::get('/listKindRooms' , function(){
+    return view('KindRooms.list');
+})->name('listKindRooms');
+
+Route::get('/createKindRooms' , function(){
+    return view('KindRooms.create');
+})->name('createKindRooms');
+
+Route::get('/updateKindRooms' , function(){
+    return view('KindRooms.update');
+})->name('updateKindRooms');
+
+
+
 
 
 

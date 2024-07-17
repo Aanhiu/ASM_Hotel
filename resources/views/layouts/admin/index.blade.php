@@ -3,7 +3,7 @@
 
 @section('content')
 
-    <h1>trang chu admin</h1>
+   
 
 
     
