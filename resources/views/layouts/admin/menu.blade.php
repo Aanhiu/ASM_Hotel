@@ -11,7 +11,7 @@
 
 <body>
     <!-- Navbar-->
-    <header class="app-header d-flex bg-warning justify-content-between align-items-center">
+    <header class="app-header d-flex bg-warning justify-content-between align-items-center" style="height: 30px">
         <!-- Sidebar toggle button-->
         <a class="app-sidebar__toggle" href="#" data-bs-toggle="sidebar" aria-label="Hide Sidebar">
             <i class='bx bx-menu'></i>
@@ -82,7 +82,7 @@
             </aside>
 
 
-            <div class="flex-grow-1 p-3  ">
+            <div class="flex-grow-1 p-3 ">
 
                 <!-- Nội dung trang chính ở đây -->
                 @yield('content')

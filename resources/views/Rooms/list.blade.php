@@ -1,7 +1,7 @@
 @extends('layouts.admin.app')
 
 @section('content')
-    <main class="app-content">
+    <main class="app-content" style="width: 1230px; height: 60px;">
         <div class="app-title">
             <ul class="app-breadcrumb breadcrumb side">
                 <li class="breadcrumb-item active">
@@ -21,15 +21,15 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="table-responsive" style="max-height: 700px; overflow-y: auto;">
+                        <div class="table-responsive" style="max-height: 600px; overflow-y: auto;">
                             <table class="table table-hover table-bordered">
                                 <thead>
                                     <tr>
 
-                                        <th>ID Phòng</th>
+                                        <th>ID</th>
                                         <th>Tên Phòng</th>
-                                        <th>Ảnh</th>
-                                        <th>Giá Phòng</th>
+                                        <th style="width: 200px;">Ảnh</th>
+                                        <th>Giá</th>
                                         <th class="w-50">Mô Tả</th>
                                         <th>Loại Phòng</th>
                                         <th>Trạng Thái</th>
@@ -48,7 +48,7 @@
                                             <td> {{ $Room->kindroom_name }} </td>
                                             <td><span class="badge bg-success">
                                                     @if ($Room->status == 0)
-                                                        <h6>Có thể thuê</h6>
+                                                        <span>Có thể thuê</span>
                                                     @endif
                                                 </span></td>
                                             <td>

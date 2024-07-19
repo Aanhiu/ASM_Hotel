@@ -1,7 +1,8 @@
 @extends('layouts.admin.app')
 
 @section('content')
-    <main class="app-content">
+
+    <main class="app-content" style="width: 1230px; height: 60px;">
         <div class="app-title">
             <ul class="app-breadcrumb breadcrumb side">
                 <li class="breadcrumb-item active">
@@ -11,7 +12,7 @@
             <div id="clock"></div>
         </div>
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12" style="height: 100px">
                 <div class="tile">
                     <div class="tile-body">
                         <div class="row element-button">
@@ -21,14 +22,14 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="table-responsive" style="max-height: 800px; overflow-y: auto;">
+                        <div class="table-responsive" style="max-height: 600px; overflow-y: auto;">
                             <table class="table table-hover table-bordered">
                                 <thead>
                                     <tr>
 
-                                        <th>Mã Loại Phòng</th>
+                                        <th style="width: 40px">ID</th>
                                         <th>Tên Loại Phòng</th>
-                                        <th class="w-75">Mô tả</th>
+                                        <th class="w-50">Mô tả</th>
                                         <th>Tình trạng</th>
                                         <th>Chức năng</th>
                                     </tr>
@@ -36,8 +37,6 @@
                                 @foreach ($KindRooms as $KindRoom)
                                     <tbody>
                                         <tr>
-
-
                                             <td>{{ $KindRoom->id }} </td>
                                             <td>{{ $KindRoom->name }}</td>
                                             <td>{{ $KindRoom->description }}</td>
@@ -54,20 +53,15 @@
 
                                                 </form>
 
-
-
                                                 {{-- nut sua loai phong theo id --}}
-                                                <a href="{{route('editKindRooms' , $KindRoom->id)}}"> <button class="btn btn-primary btn-sm edit"
-                                                        type="button" title="Sửa"><i
+                                                <a href="{{ route('editKindRooms', $KindRoom->id) }}"> <button
+                                                        class="btn btn-primary btn-sm edit" type="button" title="Sửa"><i
                                                             class="fas fa-edit">Sửa</button></a></i>
                                             </td>
                                         </tr>
-
                                         <!-- xuat  -->
                                     </tbody>
                                 @endforeach
-
-
 
                             </table>
                         </div>
@@ -76,4 +70,5 @@
             </div>
         </div>
     </main>
+
 @endsection

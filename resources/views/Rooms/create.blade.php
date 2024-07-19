@@ -21,6 +21,7 @@
                 <div class="mb-3">
                   <label class="form-label">Tên Phòng</label>
                   <input type="text" class="form-control" placeholder="Nhập tên loại phòng"  name="name" required>
+                  
                 </div>
 
                 <div class="mb-3">
@@ -50,7 +51,7 @@
                 <button class="btn btn-warning mx-2"> <a href="{{route('listRooms')}}" class="text-decoration-none">Quay lại</a> </button>
 
                 <button type="submit" class="btn btn-primary" >Thêm mới</button>
-                 
+                 <h1>{{ }}</h1>
               </form>
         </div>
     </div>
